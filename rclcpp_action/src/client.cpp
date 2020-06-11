@@ -436,9 +436,12 @@ ClientBase::execute()
     } else if (RCL_RET_ACTION_CLIENT_TAKE_FAILED != ret) {
       rclcpp::exceptions::throw_from_rcl_error(ret, "error taking cancel response");
     }
-  } else {
+  }
+  /*
+  else {
     throw std::runtime_error("Executing action client but nothing is ready");
   }
+  */
 }
 
 }  // namespace rclcpp_action

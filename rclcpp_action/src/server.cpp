@@ -198,9 +198,12 @@ ServerBase::execute()
     execute_result_request_received();
   } else if (pimpl_->goal_expired_) {
     execute_check_expired_goals();
-  } else {
+  }
+  /*
+   else {
     throw std::runtime_error("Executing action server but nothing is ready");
   }
+  */
 }
 
 void
